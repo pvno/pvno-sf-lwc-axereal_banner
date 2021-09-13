@@ -1,0 +1,41 @@
+<template>
+  <h1><span>Informations sur les offres en cours </span></h1>
+  <p class="marquee">
+    <span>
+      <a
+        href="https://sdodemo-main-166ce2cf6b6-16e-1715f569d87.force.com/professional/s/?tabset-1b486=35582"
+        style="text-decoration: none;"
+      >
+        <template for:each={ContratProductions} for:item="ContratProduction">
+          &nbsp;&nbsp;&nbsp;
+          <!--<div style="color: red;" key={ContratProduction.Name}>
+            {ContratProduction.Name}
+          </div>-->
+          {ContratProduction.Name} ({ContratProduction.Type__c}):
+          {ContratProduction.Prix_Tonne__c} €/t
+          &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+        </template>
+      </a>
+    </span>
+  </p>
+</template>
+<!-- <template>
+  <h1><span>Informations sur les offres en cours </span></h1>
+  <p class="marquee">
+    <span>
+      <a
+        href="https://sdodemo-main-166ce2cf6b6-16e-1715f569d87.force.com/professional/s/?tabset-1b486=35582"
+        style="text-decoration: none;"
+      >
+        <template for:each={ContratProductions} for:item="ContratProduction">
+          &nbsp;&nbsp;&nbsp;<span style="color: red;" key={ContratProduction.id}
+            >{ContratProduction.Name}</span
+          >
+          ({ContratProduction.Type__c}): {ContratProduction.Prix_Tonne__c} €/t
+          &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+        </template>
+      </a>
+    </span>
+  </p>
+</template>
+-->
